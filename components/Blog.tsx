@@ -39,7 +39,7 @@ const Blog: React.FC<BlogProps> = ({}) => {
               macular degeneration.
             </p>
           </div>
-          <div className="md:w-1/2 py-5">
+          <div className="md:w-1/2 py-5 flex justify-center">
             <Image src={BlogImage} alt="blog" />
           </div>
         </div>

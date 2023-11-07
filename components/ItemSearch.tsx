@@ -4,17 +4,25 @@ import { Search } from "lucide-react";
 
 interface ItemSearchProps {
   placeholder: string;
+  className?: string;
+  input?: string;
 }
 
-const ItemSearch: React.FC<ItemSearchProps> = ({ placeholder }) => {
+const ItemSearch: React.FC<ItemSearchProps> = ({
+  placeholder,
+  className,
+  input,
+}) => {
   return (
-    <div className="flex items-center border border-orange-500 rounded-lg px-1">
+    <div
+      className={`flex items-center border border-[#E55527] rounded-lg px-1 ${className}`}
+    >
       <Input
         placeholder={placeholder}
-        className="border-0 focus-visible:ring-0 focus-visible:outline-none w-full"
+        className={`border-0 focus-visible:ring-0 focus-visible:outline-none w-full ${input}`}
       ></Input>
       <Search
-        className="border-orange-500 border px-1 py-1 rounded-md bg-orange-400 bg-opacity-10 hover:cursor-pointer"
+        className="border-[#E55527] border px-1 py-1 rounded-md bg-[#E55527] bg-opacity-10 hover:cursor-pointer"
         size={30}
         color="orange"
       />

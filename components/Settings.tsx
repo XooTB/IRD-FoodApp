@@ -30,9 +30,9 @@ const Settings: React.FC = () => {
       <div className="border rounded-lg">
         <Accordion type="single" collapsible>
           <AccordionItem value="settings">
-            <AccordionTrigger className="text-orange-500 px-2 flex items-start">
+            <AccordionTrigger className="text-primary px-2 flex items-start">
               <Gear
-                className="border border-orange-400 px-1 py-1 rounded-sm"
+                className="border border-primary px-1 py-1 rounded-sm"
                 size={26}
               />{" "}
               Settings{" "}
@@ -41,7 +41,7 @@ const Settings: React.FC = () => {
               <div className="px-3">
                 <div className="text-current flex justify-between mb-5">
                   <p className="font-semibold">Paragraph font Size: </p>
-                  <p className="text-orange-500">{fontSize}</p>
+                  <p className="text-primary">{fontSize}</p>
                 </div>
                 <Slider
                   defaultValue={[fontSize]}

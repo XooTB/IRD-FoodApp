@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import SideBar from "@/components/SideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          <main>{children}</main>
+          <main>
+            <div className="flex flex-col-reverse md:flex-row">
+              <SideBar />
+              {children}
+            </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>
