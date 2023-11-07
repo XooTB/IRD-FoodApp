@@ -8,7 +8,6 @@ import useMeasure from "react-use-measure";
 export default function Home() {
   const [ref, { width }] = useMeasure();
 
-  console.log(width);
   return (
     <div className="flex flex-col-reverse md:flex-row" ref={ref}>
       {width > 790 && (
