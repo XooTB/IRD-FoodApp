@@ -12,22 +12,22 @@ interface BlogProps {}
 
 const Blog: React.FC<BlogProps> = ({}) => {
   return (
-    <div className="w-3/5 bg-white dark:bg-slate-700 min-h-screen rounded-lg flex gap-5 px-3">
-      <div className="flex flex-col gap-2 items-center h-full pt-20 w-12">
+    <div className="md:w-3/5 bg-white dark:bg-slate-700 min-h-screen rounded-lg flex flex-col-reverse md:flex-row gap-5 px-3 pb-10">
+      <div className="flex md:flex-col flex-row gap-2 md:items-center md:h-full md:pt-20 md:w-12 px-5">
         {Socials.map(({ icon, url }, i) => (
-          <Link href={url} key={i}>
+          <Link href={url} key={i} className="w-7 h-7">
             <Image src={icon} alt="url" className="cursor-pointer w-7 h-7" />
           </Link>
         ))}
       </div>
-      <div className="pt-10 w-5/6">
-        <div className="flex items-center">
-          <div className="w-1/2 text-current">
+      <div className="pt-10 md:w-5/6">
+        <div className="flex flex-col md:flex-row md:items-center justify-center px-5 md:px-0">
+          <div className="md:w-1/2 text-current">
             <h1 className="text-4xl font-bold">
               Health benefits of an avocado
             </h1>
             <p className="font-medium mt-2 mb-1">Supports eye health:</p>
-            <p className="text-sm">
+            <p className="text-sm w-full">
               Spinach contains high levels of vitamin A and other antioxidants
               that help maintain healthy vision and protect against age-related
               macular degeneration.
@@ -39,11 +39,11 @@ const Blog: React.FC<BlogProps> = ({}) => {
               macular degeneration.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 py-5">
             <Image src={BlogImage} alt="blog" />
           </div>
         </div>
-        <div>
+        <div className="px-5 md:px-0">
           <p className="font-medium mt-3 mb-1">Supports eye health:</p>
           <p className="text-sm">
             Spinach contains high levels of vitamin A and other antioxidants
@@ -60,11 +60,11 @@ const Blog: React.FC<BlogProps> = ({}) => {
             against age-related macular degeneration.
           </p>
         </div>
-        <div className="flex mt-10 gap-3 items-center">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row mt-10 gap-3 items-center px-5 md:px-0">
+          <div className="md:w-1/2">
             <Image src={BlogImage1} alt="blog" />
           </div>
-          <div className="w-1/2 text-current">
+          <div className="md:w-1/2 text-current">
             <p className="font-medium mt-2 mb-1">Supports eye health:</p>
             <p className="text-sm">
               Spinach contains high levels of vitamin A and other antioxidants
@@ -79,7 +79,7 @@ const Blog: React.FC<BlogProps> = ({}) => {
             </p>
           </div>
         </div>
-        <div className="py-20">
+        <div className="py-10 md:py-20 px-5">
           <h1 className="font-semibold">Was this Helpful?</h1>
           <div className="flex gap-1">
             <Star />

@@ -8,8 +8,8 @@ const SideBar: React.FC<Props> = () => {
   return (
     <div
       className="
-      flex items-center sticky bg-white bottom-0 h-20 justify-center w-full gap-5 rounded-t-md dark:bg-gray-800 dark:text-white py-2 
-      md:left-0 md:flex-col md:w-20 md:min-h-screen md:top-0 md:rounded-none md:dark:bg-inherit md:bg-white
+      flex items-center sticky bg-white bottom-0 h-20 justify-evenly w-full gap-5 rounded-t-md dark:bg-gray-800 dark:text-white py-2 
+      md:left-0 md:flex-col md:w-20 md:min-h-screen md:top-0 md:rounded-none md:dark:bg-inherit md:bg-white md:justify-center
      "
     >
       {SideBarItems.map(({ icon, title }, i) => (
