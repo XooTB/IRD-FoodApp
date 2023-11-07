@@ -13,7 +13,7 @@ const NavBar: React.FC = () => {
   const toggelTheme = () => {};
 
   return (
-    <nav className="h-[65px] border-b flex justify-between items-center px-10 py-5">
+    <nav className="h-[65px] flex justify-between items-center px-10 py-5">
       <div>
         <Image src={logo} alt="logo" className="hover:cursor-pointer" />
       </div>
@@ -49,7 +49,7 @@ const NavBar: React.FC = () => {
           onClick={() => setTheme("light")}
         />
         <Menu
-          className="mx-2 border px-2 py-2 bg-orange-400 bg-opacity-10 border-orange-500 rounded-lg"
+          className="mx-2 border px-2 py-2 bg-gray-400 bg-opacity-10 border-gray-500 rounded-lg"
           size={36}
           onClick={() => setTheme("light")}
         />
