@@ -11,7 +11,7 @@ interface ItemMenuProps {}
 
 const ItemMenu: React.FC<ItemMenuProps> = ({}) => {
   return (
-    <div className="w-1/5 bg-white dark:bg-slate-700 min-h-screen rounded-lg flex flex-col">
+    <div className="w-1/5 bg-white dark:bg-slate-700 h-fit rounded-lg flex flex-col">
       <Tabs
         defaultValue="fruits"
         className="w-full flex flex-col gap-3 justify-center px-2 pt-3"
@@ -39,12 +39,12 @@ const ItemMenu: React.FC<ItemMenuProps> = ({}) => {
             Fruits List
           </h1>
           <ScrollArea className="flex flex-col h-[450px] mt-3 pr-3">
-            {FruitItems.map(({ name, image, description }) => (
+            {FruitItems.map(({ name, image, description }, i) => (
               <FoodListItem
                 name={name}
                 image={image}
                 description={description}
-                key={name}
+                key={i}
               />
             ))}
           </ScrollArea>
@@ -57,12 +57,12 @@ const ItemMenu: React.FC<ItemMenuProps> = ({}) => {
             Vegetable List
           </h1>
           <ScrollArea className="flex flex-col h-[450px] mt-3 pr-3">
-            {FruitItems.map(({ name, image, description }) => (
+            {FruitItems.map(({ name, image, description }, i) => (
               <FoodListItem
                 name={name}
                 image={image}
                 description={description}
-                key={name}
+                key={i}
               />
             ))}
           </ScrollArea>

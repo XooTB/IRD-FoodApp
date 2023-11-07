@@ -13,7 +13,7 @@ const FoodListItem: React.FC<FoodListItemProps> = ({
   image,
 }) => {
   return (
-    <div className="flex py-2 px-2 gap-3 bg-gray-200 dark:bg-gray-800 rounded-lg hover:cursor-pointer mt-2">
+    <div className="flex py-2 px-2 gap-3 hover:cursor-pointer border-b">
       <Image
         src={image}
         alt="name"
